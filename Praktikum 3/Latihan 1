@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Struktur Kendali (Control Structure)
+@Judul: Praktikum 3 Materi
+@Hari/Tanggal: Senin, 20211004
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+a = int(input('Masukkan panjang sisi A: '))
+b = int(input('Masukkan panjang sisi B: '))
+c = int(input('Masukkan panjang sisi c: '))
+
+if (a==b==c):
+    print('Merupakan segitiga sama sisi')
+    
+elif (a==b or a==c or b==c):
+    print('Merupakan segitiga sama kaki')
+
+elif (a + b <= c or b + c <= a or a + c <= b):
+    print('Merupakan bukan segitiga')
+    
+elif (a*a + b*b == c*c):
+    print('Merupakan segitiga siku-siku')    
+    
+else :
+    print('Merupakan segitiga sembarang')
