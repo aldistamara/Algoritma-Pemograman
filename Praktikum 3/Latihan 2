@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Struktur Kendali (Control Structure)
+@Judul: Praktikum 3 Materi
+@Hari/Tanggal: Senin, 20211004
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Mencari Persamaan Kuadrat dan Determinan')
+a = float(input('Masukkan nilai a: '))
+b = float(input('Masukkan nilai b: '))
+c = float(input('Masukkan nilai c: '))
+
+from math import sqrt
+
+d = b * b - (4 * a * c)
+print('Determinan: ', d)
+if (d > 0):
+    x1 = (-b + sqrt(d)) / (2 * a)
+    x2 = (-b - sqrt(d)) / (2 * a) 
+    print('Memiliki akar persamaan x1 = ', x1, 'dan x2 =', x2)
+    
+elif (d == 0):
+    same = x1 = x2 = (-b + sqrt(d)) / (2 * a)
+    print('Memiliki akar persamaan x1 = x2 = ', same)
+    
+else:
+    print('Akar-akar persamaan adalah bilangan imajiner')
