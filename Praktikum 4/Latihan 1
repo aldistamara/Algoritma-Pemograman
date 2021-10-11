@@ -1,0 +1,14 @@
+@Materi: Struktur Kendali II (Control Structure)
+@Judul: Praktikum 3 Materi
+@Hari/Tanggal: Senin, 20211011
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+a = int(input('Masukkan jumlah maksimal: '))
+
+for x in range(0,a):                              
+    for y in range(0,a):                      
+        print(a , end='')
+        
+    a-= 1
+    print()
