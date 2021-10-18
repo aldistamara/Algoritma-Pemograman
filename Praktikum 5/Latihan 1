@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Struktur Kendali II (Control Structure)
+@Judul: Praktikum 3 Materi
+@Hari/Tanggal: Senin, 20211018
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+grade = '0'
+score = 0
+t = 0
+
+while (grade != '') :
+    grade = str(input('Masukkan nilai: '))
+    t = t + 1
+    if grade == '':
+        break ;
+    elif grade == 'A':
+        print('Nilai = 4.00')
+        score += 4
+    elif grade == 'A-':
+        print('Nilai = 3.75')
+        score += 3.75
+    elif grade == 'B+':
+        print('Nilai = 3.50')
+        score += 3.50
+    elif grade == 'B':
+        print('Nilai = 3.00')
+        score += 3.00
+    elif grade == 'B-':
+        print('Nilai = 2.75')
+        score += 2.75
+    elif grade == 'C+':
+        print('Nilai = 2.50')
+        score += 2.50
+    elif grade == 'C':
+        print('Nilai = 2.00')
+        score += 2.00
+    elif grade == 'C=':
+        print('Nilai = 1.75')
+        score += 1.75
+    elif grade == 'D':
+        print('Nilai = 1.50')
+        score += 1.50
+    elif grade == 'E':
+        print('Nilai = 1.25')
+        score += 1.25
+    else :
+        t = t - 1
+        print('Masukkan nilai yang benar')
+        
+if (t == 1):
+    print('Rata-ratanya adalah 0')
+else :
+    avr  = score / (t - 1)
+    print ('Rata-ratanya adalah ', avr)
