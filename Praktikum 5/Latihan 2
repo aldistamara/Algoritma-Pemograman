@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Struktur Kendali II (Control Structure)
+@Judul: Praktikum 3 Materi
+@Hari/Tanggal: Senin, 20211018
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Tiket Masuk Kebun Binatang')
+u = '0'
+t = 0
+tampung = 0
+
+while u != '':
+    u = float(input('Masukkan umur: '))
+    tampung += 1
+    if u == -1:
+       break;
+    elif 0 <= u <= 2:
+        t += 0.0
+        print('Tiket gratis, total = $', t)
+        print('Enter -1 to pay and change')
+    elif 3 <= u <= 12:
+        t += 14.0
+        print('Tiket $14.0, total = $', t)
+        print('Enter -1 to pay and change')
+    elif u >= 65:
+        t += 18.0
+        print('Tiket $18.0, total = $', t)
+        print('Enter -1 to pay and change')
+    elif 13 <= u <= 64:
+        t += 23.0
+        print('Tiket $23.0, total = $', t)
+        print('Enter -1 to pay and change')
+
+m = float(input('Masukkan uang: '))
+if m < t:
+    print('Maaf uang anda tidak cukup untuk membayar')
+else:
+    print('Harga total tiket: $', t)
+    print('Kembalian Anda: $', m - t)
