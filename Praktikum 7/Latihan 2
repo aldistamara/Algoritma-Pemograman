@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi (Function) pada Pemrograman Python
+@Judul: Praktikum 7 Materi
+@Hari/Tanggal: Senin, 20211101
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+def month(mon = 0):
+    x = True
+    while x == True:
+        mon = int(input('Masukkan bulan (1-12): '))
+        if mon == 1 or mon == 3 or mon == 5 or mon == 7 or mon == 8 or mon == 10 or mon == 12:
+            print('Bulan ini memiliki 31 hari')
+            print('Enter 0 to stop the program')
+        elif mon == 2:
+            year = int(input('Masukkan tahun: '))
+            if (year % 4 == 0 and mon == 2):
+                print('Bulan ini memiliki 29 hari')
+                print('Enter 0 to stop the program')
+            else:
+                print('Bulan ini memiliki 28 hari')
+                print('Enter -1 to stop the program')
+        elif mon == 4 or mon == 6 or mon == 9 or mon == 11:
+            print('Bulan ini memiliki 30 hari')
+            print('Enter 0 to stop the program')
+        
+        elif mon == 0:
+            x = False
+            print('Terima kasih telah menggunakan program ini')
+
+days = month()
