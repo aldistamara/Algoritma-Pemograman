@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi (Function) pada Pemrograman Python
+@Judul: Praktikum 8 Materi
+@Hari/Tanggal: Senin, 20211108
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Program ini untuk menentukan bilangan prima')
+F = False
+
+nilai = ''
+  
+def nonprima(nilai):
+    for x in range(2,nilai):
+        if (nilai % x == 0):
+            print(nilai, 'bukan bilangan prima')
+            print(x, 'kali', nilai // x, '=', nilai)
+            break
+    else:
+        prima(nilai)
+        
+def prima(nilai):
+    print(nilai, 'adalah bilangan prima')    
+           
+while (not F):
+    print('Enter 0 to stop the program')
+    nilai = int(input('Masukkan nilai: '))
+    if (nilai == 0):
+        F = True
+        print('Terima Kasih telah menggunakan program ini')
+    else:
+        nonprima(nilai)
