@@ -1,0 +1,89 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi (Function) pada Pemrograman Python
+@Judul: Praktikum 8 Materi
+@Hari/Tanggal: Senin, 20211108
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Program ini untuk menentukan angka ordinal')
+F = False
+
+number = ''
+
+def ex_first(number):
+    if number in [11,12,13]:
+        print(number, 'th')
+    elif number % 10 == 1:
+        print(number, 'st')
+    else:
+        second(number)
+        
+def second(number):
+    if number == 2 or number % 10 == 2:
+        print(number, 'nd')
+    else:
+        third(number)
+        
+def third(number):
+    if number == 3 or number % 10 == 3:
+        print(number, 'rd')
+    else:
+        others(number)
+        
+def others(number):
+    print(number, 'th')
+    
+while (not F):
+    print('Enter 0 to stop the program')
+    number = int(input('Masukkan nilai: '))
+    if (number == 0):
+        F = True
+        print(number, 'zeroth/naughth')
+        print('Terima Kasih telah menggunakan program ini')
+    else:
+        ex_first(number)# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi (Function) pada Pemrograman Python
+@Judul: Praktikum 8 Materi
+@Hari/Tanggal: Senin, 20211108
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Program ini untuk menentukan angka ordinal')
+F = False
+
+number = ''
+
+def ex_first(number):
+    if number in [11,12,13]:
+        print(number, 'th')
+    elif number % 10 == 1:
+        print(number, 'st')
+    else:
+        second(number)
+        
+def second(number):
+    if number == 2 or number % 10 == 2:
+        print(number, 'nd')
+    else:
+        third(number)
+        
+def third(number):
+    if number == 3 or number % 10 == 3:
+        print(number, 'rd')
+    else:
+        others(number)
+        
+def others(number):
+    print(number, 'th')
+    
+while (not F):
+    print('Enter 0 to stop the program')
+    number = int(input('Masukkan nilai: '))
+    if (number == 0):
+        F = True
+        print(number, 'zeroth/naughth')
+        print('Terima Kasih telah menggunakan program ini')
+    else:
+        ex_first(number)
