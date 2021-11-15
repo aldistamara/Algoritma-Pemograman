@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi (Function) pada Pemrograman Python
+@Judul: Praktikum 9 Materi
+@Hari/Tanggal: Senin, 20211115
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+def penjumlahan(angka = 0, banyak = 0, x = 1):
+    if banyak <= 0:
+        return 0
+    else:
+        angka = int(input('Masukkan angka ke-'+str(x)+': '))
+        if banyak == 1:
+            return angka
+        else:
+            x+=1
+            return angka + penjumlahan(angka, banyak - 1, x)
+t_banyak = int(input('Masukkan banyak angka: '))
+hasil = penjumlahan(banyak = t_banyak)
+print('Hasil penjumlahannya adalah ', str(hasil))
