@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi Rekursif (Recursive Function)
+@Judul: Praktikum 9 Materi
+@Hari/Tanggal: Senin, 20211115
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Program Perpangkatan')
+F = False
+
+def perpangkat(angka, pangkat):
+    if pangkat == 0:
+        return 1
+    else:
+        return angka * perpangkat(angka, pangkat - 1)
+            
+while not F:
+    angka = input('Masukkan angka: ')
+    if angka == '':
+        F = True
+        print('Terima Kasih telah menggunakan program ini')
+    else:
+        pangkat = int(input('Masukkan pangkatnya: '))
+        hasil = perpangkat(int(angka), pangkat)
+        print('Hasil pangkatnya adalah ', hasil) 
