@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi Rekursif (Recursive Function)
+@Judul: Praktikum 9 Materi
+@Hari/Tanggal: Senin, 20211115
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Program biodata File Handling')
+
+def write(bio):
+    print('Berikut ini Data kamu')
+    file = open('Biodata.txt', 'w')
+    file.write(bio)
+    file.close()
+
+def read():
+    file = open('Biodata.txt', 'r')
+    text = file.read()
+    print(text)
+    file.close()
+    
+name = input('Masukkan nama: ')
+age = input('Masukkan umur: ')
+address = input('Masukkan alamat: ')
+email = input('Masukkan email: ')
+lecturer = input('Masukkan dosen wali: ')
+bio = '\nNama: {}\nUmur: {}\nAlamat: {}\nEmail: {}\nDosen Wali: {}'.format(name, age, address, email, lecturer)
+
+write(bio)
+read()
