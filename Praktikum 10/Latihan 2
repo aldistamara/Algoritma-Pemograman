@@ -1,0 +1,72 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Fungsi Rekursif (Recursive Function)
+@Judul: Praktikum 9 Materi
+@Hari/Tanggal: Senin, 20211115
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+F = False
+
+def r_write(bio):
+    file = open(n_file+'.txt', 'w')
+    file.write(bio)
+    file.close()
+    
+def r_read():
+    file = open(n_file+'.txt', 'r')
+    text = file.read()
+    print(text)
+    file.close()
+    
+def r_add(bio):
+    file = open(n_file+'.txt','a')
+    file.write(bio)
+    file.close()
+
+while (not F):
+    try:
+        print('==== Program File Handling ====')
+        print('1. Membuat dan Menulis File')
+        print('2. Membaca File')
+        print('3. Menambah Text pada File')
+        print('4. Keluar dari Program')
+        
+        num = int(input('Masukkan pilihan berupa angka (1/2/3/4): '))   
+        if num == 1:
+            n_file = input('Masukan nama file: ')
+            name = input('Masukkan nama: ')
+            nim = input('Masukkan NIM: ')
+            akt = input('Masukkan tahun angkatan: ')
+            bio = '\nNama: {}\nNIM: {}\nAngkatan: {}'.format(name, nim, akt)
+           
+            r_write(bio)
+            print('\nFile berhasil dibuat\n')
+        
+        elif num == 2:
+            n_file = input('Masukkan nama file: ')
+            
+            r_read()
+            print('\n')
+            
+        elif num == 3:
+            n_file = input('Masukkan nama file: ')
+            pal = input('Masukkan nama sahabatmu: ')
+            note =input('Masukkan catatan tambahan kamu: ')
+            bio = '\nNama Sabahat: {}\nCatatan: {}'.format(pal, note)
+            
+            r_add(bio)
+            print('\nFile berhasil ditambahkan\n')
+        
+        elif num == 4:
+            F = True
+            print('Terima Kasih telah menggunakan program ini')
+            
+        else:
+            print('Masukkan pilihan dengan benar\n')
+            
+    except ValueError:
+        print('Masukkan data kembali')
+        
+    except FileNotFoundError:
+        print('File', n_file, 'tidak dapat ditemukan\n')
