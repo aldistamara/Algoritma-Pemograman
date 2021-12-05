@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Search, List & Sorting
+@Judul: Praktikum 10 Materi
+@Hari/Tanggal: Senin, 2021129
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+print('Bubble Sort dengan Recursive')
+def tukar(a, x, y):
+    temp = a[x]
+    a[x] = a[y]
+    a[y] = temp
+
+def rec_bubblesort(a, i):
+    for x in range(i - 1):
+        if a[x] > a[x + 1]:
+            tukar(a, x, x + 1)
+    if i - 1 > 1:
+        rec_bubblesort(a, i - 1)
+
+print('Sebelum di Sorting: [9, 26, 11, 20, 18, 5, 15]')
+a = [9, 26, 11, 20, 18, 5, 15]
+rec_bubblesort(a, len(a))
+print('Sesudah di Sorting:', a)
