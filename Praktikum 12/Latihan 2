@@ -6,14 +6,15 @@
 @NIM: 065002100021
 @author: Aldis Tamara Putri Iskandar
 """
-F = False    
+F = False
+
 class OOP:
     def __init__(self, name, score):
         self.name = name
         self.score = score
         
     def show(self):
-        print('Nama : {}\nNilai : {}\n'.format(self.name,self.score))
+        print('Nama: {}\nNilai: {}\n'.format(self.name, self.score))
         
     def get_name(self):
         return self.name
