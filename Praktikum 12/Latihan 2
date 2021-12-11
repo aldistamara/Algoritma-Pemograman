@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Object Oriented Programming pada Python
+@Judul: Praktikum 11 Materi
+@Hari/Tanggal: Senin, 20211206
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+F = False    
+class OOP:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+        
+    def show(self):
+        print('Nama : {}\nNilai : {}\n'.format(self.name,self.score))
+        
+    def set_name(self, name):
+        self.name = name
+        
+    def set_score(self, score):
+        self.score = score
+        
+    def delete(self):
+        self.name = None
+        self.score = None
+        
+while not F:
+    print('==== Program OOP ====')
+    print('1. Mendeklarasikan Objek')
+    print('2. Menampilkan Objek')
+    print('3. Merubah Nilai Objek')
+    print('4. Menghapus Objek')
+    print('5. Keluar dari Program')
+    num = int(input('Masukkan pilihan berupa angka (1/2/3/4/5): '))
+    if num == 1:
+        name = input('Masukkan nama: ')
+        score = input('Masukkan nilai: ')
+        bio = OOP(name, score)
+        print('Data berhasil ditambahkan\n')
