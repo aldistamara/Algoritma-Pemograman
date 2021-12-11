@@ -15,6 +15,12 @@ class OOP:
     def show(self):
         print('Nama : {}\nNilai : {}\n'.format(self.name,self.score))
         
+    def get_name(self):
+        return self.name
+    
+    def get_score(self):
+        return self.score
+        
     def set_name(self, name):
         self.name = name
         
@@ -38,3 +44,31 @@ while not F:
         score = input('Masukkan nilai: ')
         bio = OOP(name, score)
         print('Data berhasil ditambahkan\n')
+        
+    elif num == 2:
+        bio.show()
+            
+    elif num == 3:
+        pilih = str(input('Apa yang ingin diubah (Nama/Nilai): '))
+        if pilih == 'Nama':
+            name = input('Masukkan nama: ')
+            bio.name = name
+            print('Data berhasil diubah\n')
+        elif pilih == 'Nilai':
+            score = input('Masukkan nilai: ')
+            bio.score = score
+            print('Data berhasil diubah\n')
+        else:
+            print('Masukkan pilihan yang benar\n')
+        
+    elif num == 4:
+        bio.name = None
+        bio.score = None
+        print('Data berhasil dihapus\n')
+        
+    elif num == 5:
+        F = True
+        print('Terima Kasih telah menggunakan program ini')
+            
+    else:
+        print('Masukkan pilihan yang benar\n')
