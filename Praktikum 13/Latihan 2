@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+@Materi: Pengantar Data Science
+@Judul: Praktikum 12 Materi
+@Hari/Tanggal: Jumat, 20211217
+@NIM: 065002100021
+@author: Aldis Tamara Putri Iskandar
+"""
+import pandas as pd
+
+def negara_mean(data):
+    file = open('Negara Mean.csv', 'w')
+    file.write(data)
+    file.close()
+    
+def negara_std(data):
+    file = open('Negara Standar Deviasi.csv', 'w')
+    file.write(data)
+    file.close()
+ 
+data = pd.read_csv('D:/Negara.csv')
+
+df = pd.DataFrame(data)
+mean = df.groupby(['Benua']).mean()
+std = df.groupby(['Benua']).std()
+
+print('Berikut Data Framenya: ')
+print(df)
+print('')
+print('Berikut Data Mean: ')
+print(mean)
+print('')
+print('Berikut Data Standard Deviation: ')
+print(std)
+print('')
+print('File berhasil dibuat')
+
+negara_mean(str(mean))
+negara_std(str(std))
